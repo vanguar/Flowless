@@ -5,9 +5,13 @@ const CONFIG = {
   telegram: "@Criptonius",            // без @  → ссылка t.me/username
   email: "avotiyaaa@gmail.com",        // ваш email
   phone: "+380734196070",           // в международном формате для ссылки tel:
-  // Endpoint Formspree (https://formspree.io) или другого сервиса приёма форм.
+  // Access Key с https://web3forms.com (введите там свою почту → получите ключ).
+  // Заявки будут приходить на ту почту, к которой привязан ключ. Это проще
+  // всего: регистрация не нужна, ничего ставить не надо.
+  web3formsKey: "",                // напр. "a1b2c3d4-1234-5678-90ab-cdef12345678"
+  // Альтернатива: endpoint Formspree или своего бэкенда.
   // GitHub Pages — статика, поэтому форму обрабатывает сторонний сервис.
-  // Оставьте пустым "" — тогда заявка уйдёт письмом/в Telegram (fallback).
+  // Если оба пустые "" — заявка уйдёт письмом/в Telegram (fallback).
   formEndpoint: ""                 // напр. "https://formspree.io/f/xxxxxx"
 };
 
