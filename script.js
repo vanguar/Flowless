@@ -266,8 +266,9 @@ function setupForm() {
         if (res.ok && json.success) {
           toast(d["toast.success"], "success");
           form.reset();
-        } else { throw new Error("bad status"); }
+        } else { throw new Error(json.message || "bad status"); }
       } catch {
+        toast(d["toast.error"], "error");
         fallbackSend(data, d);
       } finally {
         btn.disabled = false; btn.textContent = original;
