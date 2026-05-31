@@ -5,6 +5,7 @@ const CONFIG = {
   telegram: "@Criptonius",            // без @  → ссылка t.me/username
   email: "avotiyaaa@gmail.com",        // ваш email
   phone: "+380734196070",           // в международном формате для ссылки tel:
+  portfolio: "https://vanguar.github.io/",  // страница с вашими проектами (пусто "" — скрыть)
   // Access Key с https://web3forms.com (введите там свою почту → получите ключ).
   // Заявки будут приходить на ту почту, к которой привязан ключ. Это проще
   // всего: регистрация не нужна, ничего ставить не надо.
@@ -52,7 +53,7 @@ const I18N = {
     "feat3.title": "Без лишней теории", "feat3.text": "Сразу к результату — понятно и по делу.",
     "contact.eyebrow": "Контакты", "contact.title": "Обсудим вашу задачу",
     "contact.lead": "Опишите задачу — предложу понятный вариант решения. Отвечаю обычно в течение дня.",
-    "ci.telegram": "Telegram", "ci.email": "Email", "ci.phone": "Телефон",
+    "ci.telegram": "Telegram", "ci.email": "Email", "ci.phone": "Телефон", "ci.portfolio": "Мои проекты",
     "form.title": "Оставить заявку",
     "form.nameLabel": "Как к вам обращаться", "form.namePh": "Имя",
     "form.contactLabel": "Контакт для связи", "form.contactPh": "Telegram, email или телефон",
@@ -106,7 +107,7 @@ const I18N = {
     "feat3.title": "Без зайвої теорії", "feat3.text": "Одразу до результату — зрозуміло та по суті.",
     "contact.eyebrow": "Контакти", "contact.title": "Обговоримо ваше завдання",
     "contact.lead": "Опишіть завдання — запропоную зрозумілий варіант рішення. Відповідаю зазвичай протягом дня.",
-    "ci.telegram": "Telegram", "ci.email": "Email", "ci.phone": "Телефон",
+    "ci.telegram": "Telegram", "ci.email": "Email", "ci.phone": "Телефон", "ci.portfolio": "Мої проєкти",
     "form.title": "Залишити заявку",
     "form.nameLabel": "Як до вас звертатися", "form.namePh": "Ім'я",
     "form.contactLabel": "Контакт для зв'язку", "form.contactPh": "Telegram, email або телефон",
@@ -185,6 +186,16 @@ function setupContacts() {
   if (ph && CONFIG.phone) {
     ph.href = "tel:" + CONFIG.phone.replace(/[^+\d]/g, "");
     ph.querySelector(".ci-value").textContent = CONFIG.phone;
+  }
+  const pf = document.getElementById("contactPortfolio");
+  if (pf) {
+    if (CONFIG.portfolio) {
+      pf.href = CONFIG.portfolio;
+      pf.querySelector(".ci-value").textContent =
+        CONFIG.portfolio.replace(/^https?:\/\//, "").replace(/\/$/, "");
+    } else {
+      pf.closest("li").remove();
+    }
   }
 }
 
