@@ -1,0 +1,11 @@
+# Служебное
+.claude/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Логи / зависимости (на будущее)
+node_modules/
+*.log
+.env
+.env.local
