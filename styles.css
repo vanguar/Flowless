@@ -283,6 +283,7 @@ img, svg { display: block; max-width: 100%; }
 .contact-item:hover { transform: translateX(5px); box-shadow: var(--shadow-md); }
 .ci-icon { flex: 0 0 42px; width: 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; color: #fff; }
 .ci-tg { background: #229ed9; } .ci-mail { background: var(--blue); } .ci-phone { background: var(--green); }
+.ci-portfolio { background: #7c5cff; }
 .ci-label { display: block; font-size: .76rem; color: var(--muted); font-weight: 600; }
 .ci-value { display: block; font-weight: 700; }
 
