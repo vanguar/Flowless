@@ -235,7 +235,36 @@ function setupForm() {
     btn.textContent = d["btn.sending"];
     toast(d["toast.sending"]);
 
-    // 1) Если задан Formspree/endpoint — отправляем через fetch
+    // 1) Если задан ключ Web3Forms — отправляем письмо на вашу почту
+    if (CONFIG.web3formsKey) {
+      try {
+        const res = await fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: { "Accept": "application/json", "Content-Type": "application/json" },
+          body: JSON.stringify({
+            access_key: CONFIG.web3formsKey,
+            subject: "Заявка с сайта · " + data.topic,
+            from_name: data.name,
+            name: data.name,
+            contact: data.contact,
+            topic: data.topic,
+            message: data.message
+          })
+        });
+        const json = await res.json().catch(() => ({}));
+        if (res.ok && json.success) {
+          toast(d["toast.success"], "success");
+          form.reset();
+        } else { throw new Error("bad status"); }
+      } catch {
+        fallbackSend(data, d);
+      } finally {
+        btn.disabled = false; btn.textContent = original;
+      }
+      return;
+    }
+
+    // 2) Если задан Formspree/endpoint — отправляем через fetch
     if (CONFIG.formEndpoint) {
       try {
         const res = await fetch(CONFIG.formEndpoint, {
