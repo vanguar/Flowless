@@ -254,6 +254,23 @@ img, svg { display: block; max-width: 100%; }
 .suitable p { font-size: 1.05rem; color: var(--muted); }
 .suitable strong { color: var(--text); }
 
+/* навыки и проекты */
+.skills-lead { color: var(--muted); margin-top: 14px; font-size: 1.02rem; }
+.skills-tags {
+  list-style: none; display: flex; flex-wrap: wrap; justify-content: center;
+  gap: 10px; max-width: 760px; margin: 0 auto;
+}
+.skills-tags li {
+  background: var(--card); border: 1px solid var(--border); border-radius: 999px;
+  padding: 9px 18px; font-weight: 600; font-size: .96rem; color: var(--text);
+  box-shadow: var(--shadow-sm); transition: transform .18s ease, box-shadow .25s ease, border-color .2s ease;
+}
+.skills-tags li:hover {
+  transform: translateY(-3px); box-shadow: var(--shadow-md);
+  border-color: color-mix(in srgb, var(--blue) 45%, var(--border));
+}
+.skills-cta { text-align: center; margin-top: 28px; }
+
 /* подход */
 .features-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
 .feature {
