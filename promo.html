@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Автоматизация бизнес-процессов — промо</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;background:#05080f;font-family:'Manrope',system-ui,sans-serif;
+    color:#fff;-webkit-font-smoothing:antialiased;overflow:hidden;}
+  body{display:flex;align-items:center;justify-content:center;}
+
+  .stage{position:relative;height:100vh;width:calc(100vh*9/16);max-width:100vw;
+    aspect-ratio:9/16;overflow:hidden;background:#0a0f1e;box-shadow:0 0 80px rgba(0,0,0,.6);}
+  @media (max-aspect-ratio:9/16){ .stage{width:100vw;height:calc(100vw*16/9);} }
+
+  video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;}
+
+  /* интерактивная финальная карточка — рисуется ровно как кадр видео (1080x1920) */
+  .endcard{position:absolute;inset:0;opacity:0;pointer-events:none;
+    transition:opacity .55s ease;}
+  .endcard.show{opacity:1;pointer-events:auto;}
+  .scaler{position:absolute;top:0;left:0;width:1080px;height:1920px;transform-origin:top left;}
+
+  .ec-bg{position:absolute;inset:0;background:
+      radial-gradient(1200px 900px at 20% 10%, #20307a 0%, transparent 60%),
+      radial-gradient(1000px 800px at 90% 30%, #5b2a8c 0%, transparent 55%),
+      linear-gradient(160deg,#0b1230 0%,#0a0f22 55%,#0a0d1c 100%);}
+  .blob{position:absolute;border-radius:50%;filter:blur(60px);}
+  .b1{width:520px;height:520px;background:#2f6bff;left:-120px;top:200px;opacity:.55;}
+  .b2{width:480px;height:480px;background:#7c5cff;right:-140px;top:760px;opacity:.55;}
+  .b3{width:440px;height:440px;background:#22c55e;left:120px;bottom:-160px;opacity:.35;}
+
+  .ec-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
+    justify-content:center;padding:120px 90px;text-align:center;}
+  .mark{width:120px;height:120px;border-radius:30px;background:linear-gradient(135deg,#2f6bff,#7c5cff);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px rgba(47,107,255,.5);}
+  .mark svg{width:72px;height:72px;}
+  .ec-content h1{font-size:80px;line-height:1.04;font-weight:800;letter-spacing:-1px;margin-top:46px;}
+  .accent{background:linear-gradient(90deg,#4d86ff,#9b7bff);-webkit-background-clip:text;
+    background-clip:text;color:transparent;}
+  .btn{display:inline-block;font-size:54px;font-weight:800;color:#fff;text-decoration:none;
+    background:linear-gradient(135deg,#2f6bff,#7c5cff);border-radius:999px;padding:42px 80px;
+    margin-top:64px;box-shadow:0 28px 70px rgba(47,107,255,.55);
+    transition:transform .15s ease, box-shadow .15s ease;}
+  .btn:hover{transform:translateY(-4px);box-shadow:0 36px 90px rgba(47,107,255,.7);}
+  .url{font-size:46px;font-weight:700;color:#cdd8f5;margin-top:46px;text-decoration:none;
+    display:inline-flex;align-items:center;gap:16px;}
+  .url:hover{color:#fff;}
+
+  /* экранные контролы (не масштабируются) */
+  .controls{position:absolute;top:18px;right:18px;display:flex;gap:10px;z-index:5;}
+  .ctrl{width:48px;height:48px;border:none;border-radius:50%;cursor:pointer;
+    background:rgba(255,255,255,.14);color:#fff;font-size:20px;backdrop-filter:blur(6px);
+    display:flex;align-items:center;justify-content:center;transition:background .15s;}
+  .ctrl:hover{background:rgba(255,255,255,.28);}
+  .replay{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);z-index:5;
+    background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;
+    font-family:inherit;font-size:15px;font-weight:600;padding:10px 22px;border-radius:999px;
+    cursor:pointer;opacity:0;pointer-events:none;transition:opacity .4s;backdrop-filter:blur(6px);}
+  .replay.show{opacity:1;pointer-events:auto;}
+</style>
+</head>
+<body>
+  <div class="stage" id="stage">
+    <video id="vid" src="promo-reels.mp4" muted playsinline preload="auto"></video>
+
+    <div class="controls">
+      <button class="ctrl" id="muteBtn" title="Звук">🔇</button>
+    </div>
+
+    <div class="endcard" id="endcard">
+      <div class="scaler" id="scaler">
+        <div class="ec-bg">
+          <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+        </div>
+        <div class="ec-content">
+          <div class="mark"><svg viewBox="0 0 32 32"><path d="M9 21l4-10 3 6 2-3 5 7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h1>Опишите задачу —<br>предложу <span class="accent">решение</span></h1>
+          <a class="btn" href="index.html#contact">Оставить заявку →</a>
+          <a class="url" href="https://vanguar.github.io/" target="_blank" rel="noopener">🔗 vanguar.github.io</a>
+        </div>
+      </div>
+    </div>
+
+    <button class="replay" id="replay">↻ Смотреть снова</button>
+  </div>
+
+<script>
+  const vid=document.getElementById('vid');
+  const endcard=document.getElementById('endcard');
+  const replay=document.getElementById('replay');
+  const muteBtn=document.getElementById('muteBtn');
+  const stage=document.getElementById('stage');
+  const scaler=document.getElementById('scaler');
+
+  // масштабируем финальную карточку точно под размер видео (дизайн 1080x1920)
+  function fit(){ scaler.style.transform='scale('+(stage.clientWidth/1080)+')'; }
+  window.addEventListener('resize',fit); fit();
+
+  // автоплей (без звука — требование браузеров)
+  vid.play().catch(()=>{});
+
+  // незаметная подмена: показываем интерактивную карту в начале CTA-сцены
+  const SHOW_BEFORE_END=4.0;
+  vid.addEventListener('timeupdate',()=>{
+    if(vid.duration && vid.currentTime>=vid.duration-SHOW_BEFORE_END){
+      endcard.classList.add('show'); replay.classList.add('show');
+    }
+  });
+  vid.addEventListener('ended',()=>{ endcard.classList.add('show'); replay.classList.add('show'); });
+
+  replay.addEventListener('click',()=>{
+    endcard.classList.remove('show'); replay.classList.remove('show');
+    vid.currentTime=0; vid.play().catch(()=>{});
+  });
+
+  muteBtn.addEventListener('click',()=>{
+    vid.muted=!vid.muted; muteBtn.textContent=vid.muted?'🔇':'🔊';
+    if(!vid.muted) vid.play().catch(()=>{});
+  });
+</script>
+</body>
+</html>

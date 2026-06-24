@@ -407,6 +407,7 @@ document.addEventListener("DOMContentLoaded", () => {
   setupForm();
   setupMenu();
   setupReveal();
+  setupShowreel();
 
   // счётчики стартуют, когда дашборд появляется в зоне видимости
   const visual = document.querySelector(".hero-visual");
@@ -419,3 +420,43 @@ document.addEventListener("DOMContentLoaded", () => {
     animateCounters();
   }
 });
+
+/* ---------- ВИДЕО-ПРЕЗЕНТАЦИЯ (showreel) ---------- */
+function setupShowreel() {
+  const vid = document.getElementById("srVideo");
+  if (!vid) return;
+  const endcard = document.getElementById("srEndcard");
+  const replay = document.getElementById("srReplay");
+  const mute = document.getElementById("srMute");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  const showEnd = () => { endcard.classList.add("show"); replay.classList.add("show"); };
+  const hideEnd = () => { endcard.classList.remove("show"); replay.classList.remove("show"); };
+
+  // финальная карта появляется в начале CTA-сцены (за ~4с до конца)
+  vid.addEventListener("timeupdate", () => {
+    if (vid.duration && vid.currentTime >= vid.duration - 4) showEnd();
+  });
+  vid.addEventListener("ended", showEnd);
+
+  replay.addEventListener("click", () => {
+    hideEnd(); vid.currentTime = 0; vid.play().catch(() => {});
+  });
+  mute.addEventListener("click", () => {
+    vid.muted = !vid.muted;
+    mute.textContent = vid.muted ? "🔇" : "🔊";
+    mute.setAttribute("aria-label", vid.muted ? "Включить звук" : "Выключить звук");
+    if (!vid.muted) vid.play().catch(() => {});
+  });
+
+  // автозапуск без звука при попадании в зону видимости, пауза за экраном
+  if (reduce) { vid.controls = true; return; }
+  if (!("IntersectionObserver" in window)) { vid.play().catch(() => {}); return; }
+  const io = new IntersectionObserver((ents) => {
+    ents.forEach((e) => {
+      if (e.isIntersecting) vid.play().catch(() => {});
+      else if (!endcard.classList.contains("show")) vid.pause();
+    });
+  }, { threshold: 0.5 });
+  io.observe(vid);
+}
