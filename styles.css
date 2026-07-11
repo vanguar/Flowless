@@ -355,7 +355,7 @@ img, svg { display: block; max-width: 100%; }
 .aftercare-heading h2 { margin-top: 16px; font-size: clamp(1.65rem, 3.2vw, 2.25rem); font-weight: 800; }
 .aftercare-copy { display: flex; flex-direction: column; gap: 18px; color: var(--muted); }
 .aftercare-copy p { max-width: 62em; }
-.aftercare-humor {
+.aftercare-note {
   padding-left: 18px; border-left: 3px solid var(--green);
   color: var(--text); font-weight: 700;
 }

@@ -663,7 +663,7 @@ Object.assign(I18N.ru, {
   "aftercare.eyebrow": "После запуска",
   "aftercare.title": "Запуск — это начало эксплуатации, а не конец работы",
   "aftercare.text": "Даже официально запущенному проекту нужно время под наблюдением. В реальной работе могут проявиться редкие ошибки, новые сценарии и идеи для улучшения. Поэтому первое время проект стоит тестировать, отслеживать его работу, исправлять найденные баги и при необходимости модернизировать.",
-  "aftercare.humor": "Нет, это не делает нас почти родственниками: ходить друг к другу в гости и крестить общих детей не придётся. Просто цифровые продукты живут и меняются.",
+  "aftercare.note": "Сопровождение не требует вашего постоянного участия: формат наблюдения и дальнейших работ согласовывается отдельно и зависит от задач проекта.",
   "aftercare.closing": "Со временем могут измениться сервисы, требования бизнеса или появиться более удачное решение — тогда снова понадобится заглянуть в код. Доработки возможны по вашему желанию, по потребности бизнеса или из-за технической необходимости."
 });
 
@@ -671,7 +671,7 @@ Object.assign(I18N.uk, {
   "aftercare.eyebrow": "Після запуску",
   "aftercare.title": "Запуск — це початок експлуатації, а не кінець роботи",
   "aftercare.text": "Навіть офіційно запущеному проєкту потрібен час під наглядом. У реальній роботі можуть проявитися рідкісні помилки, нові сценарії та ідеї для покращення. Тому спочатку проєкт варто тестувати, стежити за його роботою, виправляти знайдені баги та за потреби модернізувати.",
-  "aftercare.humor": "Ні, це не робить нас майже родичами: ходити одне до одного в гості й хрестити спільних дітей не доведеться. Просто цифрові продукти живуть і змінюються.",
+  "aftercare.note": "Супровід не потребує вашої постійної участі: формат спостереження та подальших робіт узгоджується окремо й залежить від завдань проєкту.",
   "aftercare.closing": "З часом можуть змінитися сервіси, вимоги бізнесу або з'явитися вдаліше рішення — тоді знову знадобиться зазирнути в код. Доробки можливі за вашим бажанням, через потреби бізнесу або з технічної необхідності."
 });
 
@@ -679,7 +679,7 @@ Object.assign(I18N.en, {
   "aftercare.eyebrow": "After launch",
   "aftercare.title": "Launch is the start of real use, not the end of the work",
   "aftercare.text": "Even an officially launched project needs a period of observation. Real use can reveal rare errors, new scenarios and ideas for improvement. That is why a project should initially be tested and monitored, with discovered bugs fixed and the solution upgraded when needed.",
-  "aftercare.humor": "No, that does not make us almost family: we will not have to visit each other's homes or become godparents to each other's children. Digital products simply live and change.",
+  "aftercare.note": "Ongoing support does not require your constant involvement: the monitoring approach and any further work are agreed separately based on the project's needs.",
   "aftercare.closing": "Over time, services or business requirements may change, or a better solution may appear — and the code may need attention again. Further work can be requested by you, driven by business needs or required for technical reasons."
 });
 
@@ -687,7 +687,7 @@ Object.assign(I18N.pl, {
   "aftercare.eyebrow": "Po uruchomieniu",
   "aftercare.title": "Uruchomienie to początek użytkowania, a nie koniec pracy",
   "aftercare.text": "Nawet oficjalnie uruchomiony projekt potrzebuje okresu obserwacji. W codziennym użytkowaniu mogą ujawnić się rzadkie błędy, nowe scenariusze i pomysły na ulepszenia. Dlatego na początku warto projekt testować i monitorować, usuwać znalezione błędy oraz w razie potrzeby go modernizować.",
-  "aftercare.humor": "Nie oznacza to, że stajemy się niemal rodziną: nie musimy odwiedzać się w domach ani zostawać rodzicami chrzestnymi swoich dzieci. Produkty cyfrowe po prostu żyją i się zmieniają.",
+  "aftercare.note": "Obsługa projektu nie wymaga Państwa stałego zaangażowania: sposób monitorowania i zakres dalszych prac ustalamy osobno, zależnie od potrzeb projektu.",
   "aftercare.closing": "Z czasem mogą zmienić się usługi lub wymagania biznesowe, albo może pojawić się lepsze rozwiązanie — wtedy znów trzeba będzie zajrzeć do kodu. Dalsze prace mogą wynikać z Państwa życzenia, potrzeb biznesowych lub konieczności technicznej."
 });
 
@@ -695,7 +695,7 @@ Object.assign(I18N.de, {
   "aftercare.eyebrow": "Nach dem Go-live",
   "aftercare.title": "Der Go-live ist der Beginn des Betriebs, nicht das Ende der Arbeit",
   "aftercare.text": "Auch ein offiziell gestartetes Projekt braucht eine Phase der Beobachtung. Im realen Betrieb können seltene Fehler, neue Anwendungsfälle und Ideen für Verbesserungen sichtbar werden. Deshalb sollte das Projekt anfangs getestet und überwacht werden; gefundene Bugs werden behoben und die Lösung bei Bedarf modernisiert.",
-  "aftercare.humor": "Dadurch werden wir nicht gleich fast zur Familie: Wir müssen uns weder gegenseitig besuchen noch Paten für die Kinder des anderen werden. Digitale Produkte leben und verändern sich einfach.",
+  "aftercare.note": "Die weitere Betreuung erfordert keine ständige Mitwirkung Ihrerseits: Form und Umfang der Beobachtung sowie weiterer Arbeiten werden je nach Projektbedarf separat abgestimmt.",
   "aftercare.closing": "Mit der Zeit können sich Dienste oder Geschäftsanforderungen ändern, oder es entsteht eine bessere Lösung — dann braucht auch der Code wieder Aufmerksamkeit. Weitere Arbeiten können auf Ihren Wunsch, aus geschäftlichen Gründen oder aus technischer Notwendigkeit erfolgen."
 });
 
