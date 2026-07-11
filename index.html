@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Автоматизация бизнес-процессов — AI, боты, интеграции</title>
+  <title>Flowless — автоматизация бизнес-процессов</title>
   <meta name="description" id="metaDesc" content="Помогаю автоматизировать рутину: обработка заявок, Telegram-боты, интеграции CRM, Google Sheets и API, отчёты и MVP." />
 
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%232f6bff'/%3E%3Cpath d='M9 21l4-10 3 6 2-3 5 7' stroke='white' stroke-width='2.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
@@ -22,13 +22,13 @@
         <span class="logo-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="22" height="22"><path d="M9 21l4-10 3 6 2-3 5 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
-        <span class="logo-text">Automation<span class="logo-dot">.</span></span>
+        <span class="logo-text">Flowless<span class="logo-dot">.</span></span>
       </a>
 
       <nav class="nav" aria-label="Навигация">
         <a href="#services" data-i18n="nav.services">Услуги</a>
-        <a href="#features" data-i18n="nav.approach">Подход</a>
-        <a href="#skills" data-i18n="nav.skills">Навыки</a>
+        <a href="#packages" data-i18n="nav.packages">Пакеты</a>
+        <a href="#cases" data-i18n="nav.cases">Кейсы</a>
         <a href="#contact" data-i18n="nav.contacts">Контакты</a>
       </nav>
 
@@ -36,6 +36,9 @@
         <div class="lang-switch" role="group" aria-label="Язык / Мова">
           <button type="button" class="lang-btn is-active" data-lang="ru">RU</button>
           <button type="button" class="lang-btn" data-lang="uk">UA</button>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+          <button type="button" class="lang-btn" data-lang="pl">PL</button>
+          <button type="button" class="lang-btn" data-lang="de">DE</button>
         </div>
 
         <button type="button" class="theme-toggle" id="themeToggle" aria-label="Сменить тему">
@@ -52,8 +55,8 @@
     </div>
     <div class="mobile-menu" id="mobileMenu">
       <a href="#services" data-i18n="nav.services">Услуги</a>
-      <a href="#features" data-i18n="nav.approach">Подход</a>
-      <a href="#skills" data-i18n="nav.skills">Навыки</a>
+      <a href="#packages" data-i18n="nav.packages">Пакеты</a>
+      <a href="#cases" data-i18n="nav.cases">Кейсы</a>
       <a href="#contact" data-i18n="nav.contacts">Контакты</a>
       <a href="#contact" class="btn btn-primary" data-i18n="header.cta">Написать</a>
     </div>
@@ -238,6 +241,86 @@
       </div>
     </section>
 
+    <!-- ПАКЕТЫ -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="ico-list" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M4 7h16M4 12h16M4 17h10" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </span><span data-i18n="packages.eyebrow">Пакеты и сроки</span></span>
+          <h2 data-i18n="packages.title">Понятный старт без долгих созвонов</h2>
+          <p class="section-lead" data-i18n="packages.lead">Можно начать с маленькой автоматизации, а потом расширить её до бота, CRM-сценария или внутреннего инструмента.</p>
+        </div>
+
+        <div class="packages-grid">
+          <article class="package-card reveal">
+            <span class="package-kicker" data-i18n="pkg1.kicker">Старт</span>
+            <h3 data-i18n="pkg1.title">Мини-автоматизация</h3>
+            <p data-i18n="pkg1.text">Один ручной процесс превращаем в понятный автоматический сценарий.</p>
+            <div class="package-meta">
+              <strong data-i18n="pkg1.price">от €80</strong>
+              <span data-i18n="pkg1.time">обычно 2-5 дней</span>
+            </div>
+            <ul class="package-list">
+              <li data-i18n="pkg1.item1">заявки в Google Sheets или CRM</li>
+              <li data-i18n="pkg1.item2">уведомления в Telegram/email</li>
+              <li data-i18n="pkg1.item3">короткая инструкция после запуска</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="packages.cta">Обсудить пакет</a>
+          </article>
+
+          <article class="package-card package-card--featured reveal">
+            <span class="package-kicker" data-i18n="pkg2.kicker">Самый частый запрос</span>
+            <h3 data-i18n="pkg2.title">Бот / CRM</h3>
+            <p data-i18n="pkg2.text">Telegram-бот, обработка лидов и связка сервисов, чтобы заявки не терялись.</p>
+            <div class="package-meta">
+              <strong data-i18n="pkg2.price">от €180</strong>
+              <span data-i18n="pkg2.time">обычно 3-7 дней</span>
+            </div>
+            <ul class="package-list">
+              <li data-i18n="pkg2.item1">бот для заказов, записи или поддержки</li>
+              <li data-i18n="pkg2.item2">CRM, Google Sheets, API-интеграции</li>
+              <li data-i18n="pkg2.item3">статусы, автоответы и уведомления</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-block" data-i18n="packages.cta">Обсудить пакет</a>
+          </article>
+
+          <article class="package-card reveal">
+            <span class="package-kicker" data-i18n="pkg3.kicker">Под задачу</span>
+            <h3 data-i18n="pkg3.title">MVP / инструмент</h3>
+            <p data-i18n="pkg3.text">Небольшой сервис или внутренняя панель для команды, продаж или операций.</p>
+            <div class="package-meta">
+              <strong data-i18n="pkg3.price">от €350</strong>
+              <span data-i18n="pkg3.time">обычно 7-14 дней</span>
+            </div>
+            <ul class="package-list">
+              <li data-i18n="pkg3.item1">прототип с рабочей логикой</li>
+              <li data-i18n="pkg3.item2">личный кабинет, формы, отчёты</li>
+              <li data-i18n="pkg3.item3">интеграции и быстрые доработки</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost btn-block" data-i18n="packages.cta">Обсудить пакет</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОСЛЕ ЗАПУСКА -->
+    <section class="aftercare-section" id="aftercare">
+      <div class="container">
+        <div class="aftercare-layout reveal">
+          <div class="aftercare-heading">
+            <span class="aftercare-kicker" data-i18n="aftercare.eyebrow">После запуска</span>
+            <h2 data-i18n="aftercare.title">Запуск — это начало эксплуатации, а не конец работы</h2>
+          </div>
+          <div class="aftercare-copy">
+            <p data-i18n="aftercare.text">Даже официально запущенному проекту нужно время под наблюдением. В реальной работе могут проявиться редкие ошибки, новые сценарии и идеи для улучшения. Поэтому первое время проект стоит тестировать, отслеживать его работу, исправлять найденные баги и при необходимости модернизировать.</p>
+            <p class="aftercare-humor" data-i18n="aftercare.humor">Нет, это не делает нас почти родственниками: ходить друг к другу в гости и крестить общих детей не придётся. Просто цифровые продукты живут и меняются.</p>
+            <p data-i18n="aftercare.closing">Со временем могут измениться сервисы, требования бизнеса или появиться более удачное решение — тогда снова понадобится заглянуть в код. Доработки возможны по вашему желанию, по потребности бизнеса или из-за технической необходимости.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- НАВЫКИ И ПРОЕКТЫ -->
     <section class="section section-tight" id="skills">
       <div class="container">
@@ -268,6 +351,55 @@
       </div>
     </section>
 
+    <!-- КЕЙСЫ -->
+    <section class="section section-tight" id="cases">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><span class="ico-list" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18"><path d="M5 19V5h14v14H5zm4-4l2.5-3 2 2 2.5-4" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span><span data-i18n="cases.eyebrow">Короткие кейсы</span></span>
+          <h2 data-i18n="cases.title">Примеры задач, с которых удобно начать</h2>
+          <p class="section-lead" data-i18n="cases.lead">Даже демо-сценарий показывает главное: где теряется время, как пойдёт поток данных и что бизнес получит на выходе.</p>
+        </div>
+
+        <div class="cases-grid">
+          <article class="case-card reveal">
+            <span class="case-tag" data-i18n="case1.tag">Лиды</span>
+            <h3 data-i18n="case1.title">Заявки из Instagram/Telegram в таблицу</h3>
+            <p data-i18n="case1.problem">Проблема: заявки приходят в разные чаты, часть теряется, менеджер копирует всё вручную.</p>
+            <strong data-i18n="case1.result">Результат: каждая заявка попадает в Google Sheets/CRM, владелец получает уведомление.</strong>
+          </article>
+          <article class="case-card reveal">
+            <span class="case-tag" data-i18n="case2.tag">Бот</span>
+            <h3 data-i18n="case2.title">Telegram-бот для записи и заказов</h3>
+            <p data-i18n="case2.problem">Проблема: клиенты задают одни и те же вопросы и ждут ответа в личных сообщениях.</p>
+            <strong data-i18n="case2.result">Результат: бот собирает данные, отвечает на базовые вопросы и передаёт готовую заявку.</strong>
+          </article>
+          <article class="case-card reveal">
+            <span class="case-tag" data-i18n="case3.tag">Отчёты</span>
+            <h3 data-i18n="case3.title">Ежедневный отчёт вместо ручной сводки</h3>
+            <p data-i18n="case3.problem">Проблема: цифры по продажам и задачам собираются из таблиц и CRM руками.</p>
+            <strong data-i18n="case3.result">Результат: отчёт приходит автоматически утром в Telegram или на email.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- БЕСПЛАТНЫЙ РАЗБОР -->
+    <section class="audit-band" id="audit">
+      <div class="container audit-inner reveal">
+        <div class="audit-copy">
+          <span class="eyebrow eyebrow-dark" data-i18n="audit.eyebrow">Бесплатный разбор</span>
+          <h2 data-i18n="audit.title">Бесплатно разберу ваш процесс за 15 минут</h2>
+          <p data-i18n="audit.text">Покажу, что можно автоматизировать быстро, где будет экономия времени и с какого маленького шага лучше начать.</p>
+        </div>
+        <div class="audit-actions">
+          <a href="#contact" class="btn btn-primary" data-i18n="audit.cta">Хочу разбор</a>
+          <span data-i18n="audit.note">без обязательств и сложной подготовки</span>
+        </div>
+      </div>
+    </section>
+
     <!-- ВИДЕО-ПРЕЗЕНТАЦИЯ -->
     <section class="showreel" id="showreel">
       <div class="container showreel-grid">
@@ -279,27 +411,27 @@
                 <span class="sr-mark" aria-hidden="true">
                   <svg viewBox="0 0 32 32"><path d="M9 21l4-10 3 6 2-3 5 7" stroke="#fff" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
                 </span>
-                <p class="sr-ec-title">Опишите задачу —<br>предложу <span class="sr-accent">решение</span></p>
-                <a href="#contact" class="btn btn-primary sr-ec-btn">Оставить заявку →</a>
+                <p class="sr-ec-title"><span data-i18n="showreel.end1">Опишите задачу —</span><br><span data-i18n="showreel.end2">предложу</span> <span class="sr-accent" data-i18n="showreel.endAccent">решение</span></p>
+                <a href="#contact" class="btn btn-primary sr-ec-btn" data-i18n="showreel.endCta">Оставить заявку →</a>
               </div>
             </div>
             <button class="sr-mute" id="srMute" type="button" aria-label="Включить звук">🔇</button>
-            <button class="sr-replay" id="srReplay" type="button">↻ Заново</button>
+            <button class="sr-replay" id="srReplay" type="button" data-i18n="showreel.replay">↻ Заново</button>
           </div>
         </div>
 
         <div class="sr-copy reveal">
           <span class="eyebrow"><span class="ico-list" aria-hidden="true">
             <svg viewBox="0 0 24 24" width="16" height="16"><path d="M8 5v14l11-7z" fill="#fff"/></svg>
-          </span><span>Видео за 25 секунд</span></span>
-          <h2>Как я закрываю рутину — коротко и по делу</h2>
-          <p class="sr-lead">Небольшой обзор: с какими задачами помогаю и какой результат это даёт. Посмотрите — и опишите свою задачу, в конце ролика есть кнопка.</p>
+          </span><span data-i18n="showreel.eyebrow">Видео за 25 секунд</span></span>
+          <h2 data-i18n="showreel.title">Как я закрываю рутину — коротко и по делу</h2>
+          <p class="sr-lead" data-i18n="showreel.lead">Небольшой обзор: с какими задачами помогаю и какой результат это даёт. Посмотрите — и опишите свою задачу, в конце ролика есть кнопка.</p>
           <ul class="sr-points">
-            <li><span aria-hidden="true">📥</span> Заявки, Telegram-боты, интеграции</li>
-            <li><span aria-hidden="true">📊</span> Отчёты, парсинг, автоматизация</li>
-            <li><span aria-hidden="true">🚀</span> MVP и инструменты под вашу задачу</li>
+            <li><span aria-hidden="true">📥</span> <span data-i18n="showreel.point1">Заявки, Telegram-боты, интеграции</span></li>
+            <li><span aria-hidden="true">📊</span> <span data-i18n="showreel.point2">Отчёты, парсинг, автоматизация</span></li>
+            <li><span aria-hidden="true">🚀</span> <span data-i18n="showreel.point3">MVP и инструменты под вашу задачу</span></li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Обсудить задачу →</a>
+          <a href="#contact" class="btn btn-primary" data-i18n="showreel.cta">Обсудить задачу →</a>
         </div>
       </div>
     </section>
@@ -412,7 +544,7 @@
         <span class="logo-mark" aria-hidden="true">
           <svg viewBox="0 0 32 32" width="20" height="20"><path d="M9 21l4-10 3 6 2-3 5 7" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
-        <span class="logo-text">Automation<span class="logo-dot">.</span></span>
+        <span class="logo-text">Flowless<span class="logo-dot">.</span></span>
       </span>
       <p class="footer-copy">© <span id="year"></span> · <span data-i18n="footer.copy">AI, боты, автоматизация · Сделано без лишней сложности</span></p>
     </div>
