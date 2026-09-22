@@ -380,11 +380,12 @@ img, svg { display: block; max-width: 100%; }
 .case-card strong { display: block; color: var(--text); font-size: .96rem; line-height: 1.5; }
 
 /* бесплатный разбор */
-.audit-band { padding: 22px 0 70px; }
+.audit-band { padding: 22px 20px 70px; }
 .audit-inner {
   display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 28px; align-items: center;
   background: linear-gradient(120deg, var(--navy), var(--blue-dark) 72%, var(--blue));
   border-radius: 26px; padding: 30px 34px; box-shadow: var(--shadow-lg);
+  max-width: calc(var(--container) - 40px);
 }
 .audit-copy .eyebrow { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.18); }
 .audit-copy h2 { color: #fff; font-size: clamp(1.55rem, 3.2vw, 2.2rem); font-weight: 800; margin-top: 16px; }
